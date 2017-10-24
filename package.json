@@ -1,0 +1,18 @@
+{
+  "name": "conditions",
+  "version": "1.0.0",
+  "description": "condition system",
+  "main": "src/index",
+  "scripts": {
+    "test": "mocha --reporter nyan"
+  },
+  "author": "Andrey Shuvalov <dronbas@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}
