@@ -5,7 +5,7 @@
 [![CircleCI](https://circleci.com/gh/dronbas/scond.svg?style=svg)](https://circleci.com/gh/dronbas/scond)
 [![codecov](https://codecov.io/gh/dronbas/scond/branch/master/graph/badge.svg)](https://codecov.io/gh/dronbas/scond)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A small library that performs multi validation execution
 
