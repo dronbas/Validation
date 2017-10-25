@@ -4,7 +4,10 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://circleci.com/gh/dronbas/scond)
 [![codecov](https://codecov.io/gh/dronbas/scond/branch/master/graph/badge.svg)](https://codecov.io/gh/dronbas/scond)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![bitHound Overall Score](https://www.bithound.io/github/dronbas/scond/badges/score.svg)](https://www.bithound.io/github/dronbas/scond)
+[![bitHound Dependencies](https://www.bithound.io/github/dronbas/scond/badges/dependencies.svg)](https://www.bithound.io/github/dronbas/scond/master/dependencies/npm)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dronbas/scond/issues)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A small library that performs multi validation execution
