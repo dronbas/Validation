@@ -8,13 +8,19 @@
 A small library that performs multi validation execution
 
 ## Installation
-
+```javascript
+npm i -S scond
+```
+or
+```javascript
+yarn add scond
+```
 ## Usage
 #### Simple case
 ```javascript
-const Validator = require('./src');
+const Scond = require('scond');
 
-const validator = new Validator();
+const scond = new Scond();
 
 const check1 = {
   id: 'test_cond_1',
@@ -37,17 +43,17 @@ const check3 = {
   }
 };
 
-validator.addMulti([check1, check2]);
+scond.addMulti([check1, check2]);
 
 const values = {user: {
   access_level: 42
 }};
 
-validator.exec([{id: 'test_cond_2'}, {id: 'test_cond_1'}], values); //true
+scond.exec([{id: 'test_cond_2'}, {id: 'test_cond_1'}], values); //true
 
-validator.add(check3);
+scond.add(check3);
 
-validator.exec([{id: 'test_cond_2'}, {id: 'test_cond_1'}, {id: 'test_cond_3'}], values); //false
+scond.exec([{id: 'test_cond_2'}, {id: 'test_cond_1'}, {id: 'test_cond_3'}], values); //false
 
 ```
 
