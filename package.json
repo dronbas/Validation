@@ -2,22 +2,30 @@
   "name": "scond",
   "version": "1.0.0",
   "description": "simple condition system",
-  "keywords": ["scond", "validation", "conditions", "check"],
+  "keywords": [
+    "scond",
+    "validation",
+    "conditions",
+    "check"
+  ],
   "main": "src/index",
   "scripts": {
-    "test": "mocha --reporter nyan"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "author": "Andrey Shuvalov <dronbas@gmail.com>",
   "license": "MIT",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/dronbas/scond.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dronbas/scond.git"
   },
   "engines": {
     "node": ">=6"
   },
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^4.0.1"
+    "codecov": "^3.0.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.2.1"
   }
 }
