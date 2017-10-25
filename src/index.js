@@ -24,7 +24,7 @@ const checkCfg = cond => {
   }
 };
 
-module.exports = class Validation {
+module.exports = class Scond {
   constructor() {
     this.condList = {};
   }
