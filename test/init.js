@@ -20,37 +20,27 @@ describe("initialization", () => {
 
   it("add - should throw an error if there is no id provided", () => {
     const badCondition = {};
-    expect(() => validator.add(badCondition)).to.throw(
-      "expect id to be provided",
-    );
+    expect(() => validator.add(badCondition)).to.throw("expect id to be provided");
   });
 
   it("add - should throw an error if id is null", () => {
     const badCondition = { id: null };
-    expect(() => validator.add(badCondition)).to.throw(
-      /expect id to be a number or string/,
-    );
+    expect(() => validator.add(badCondition)).to.throw(/expect id to be a number or string/);
   });
 
   it("add - should throw an error if id type is bool", () => {
     const badCondition = { id: true };
-    expect(() => validator.add(badCondition)).to.throw(
-      /expect id to be a number or string/,
-    );
+    expect(() => validator.add(badCondition)).to.throw(/expect id to be a number or string/);
   });
 
   it("add - should throw an error if id type is object", () => {
     const badCondition = { id: {} };
-    expect(() => validator.add(badCondition)).to.throw(
-      /expect id to be a number or string/,
-    );
+    expect(() => validator.add(badCondition)).to.throw(/expect id to be a number or string/);
   });
 
   it("add - should throw an error if check type is not function", () => {
     const badCondition = { id, check: {} };
-    expect(() => validator.add(badCondition)).to.throw(
-      "expect check to be a function",
-    );
+    expect(() => validator.add(badCondition)).to.throw("expect check to be a function");
   });
 
   it("add - should add new condition to list", () => {
@@ -60,9 +50,7 @@ describe("initialization", () => {
   });
 
   it("addMulti - should throw an error if argument is not an array", () => {
-    expect(() => validator.addMulti({ id, check })).to.throw(
-      "expect conditions to be an array",
-    );
+    expect(() => validator.addMulti({ id, check })).to.throw("expect conditions to be an array");
   });
 
   it("should add multiple conditions to list", () => {

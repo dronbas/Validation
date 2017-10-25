@@ -30,9 +30,7 @@ describe("exec", () => {
     const conditionConfig = {
       id: 1,
     };
-    expect(() => validator.exec(conditionConfig, values)).to.throw(
-      "expect configs to be an array",
-    );
+    expect(() => validator.exec(conditionConfig, values)).to.throw("expect configs to be an array");
   });
 
   it("should throw an error if condition module not fonud", () => {
@@ -41,9 +39,7 @@ describe("exec", () => {
         id: 777,
       },
     ];
-    expect(() => validator.exec(conditionConfig, values)).to.throw(
-      "expect condition module #777 to be added",
-    );
+    expect(() => validator.exec(conditionConfig, values)).to.throw("expect condition module #777 to be added");
   });
 
   it("should return false if any condition fails", () => {

@@ -16,9 +16,7 @@ const checkCfg = cond => {
   }
 
   if (typeof cond.id !== "number" && typeof cond.id !== "string") {
-    throw new Error(
-      `expect id to be a number or string, id is ${typeof cond.id}`,
-    );
+    throw new Error(`expect id to be a number or string, id is ${typeof cond.id}`);
   }
 
   if (typeof cond.check !== "function") {
