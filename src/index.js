@@ -8,19 +8,21 @@
  */
 const checkCfg = cond => {
   if (cond instanceof Object !== true) {
-    throw new Error('expect condition to be an object')
+    throw new Error("expect condition to be an object");
   }
 
   if (cond.id === undefined) {
-    throw new Error('expect id to be provided')
+    throw new Error("expect id to be provided");
   }
 
-  if (typeof cond.id !== 'number' && typeof cond.id !== 'string') {
-    throw new Error(`expect id to be a number or string, id is ${typeof cond.id}`)
+  if (typeof cond.id !== "number" && typeof cond.id !== "string") {
+    throw new Error(
+      `expect id to be a number or string, id is ${typeof cond.id}`,
+    );
   }
 
-  if (typeof cond.check !== 'function') {
-    throw new Error('expect check to be a function')
+  if (typeof cond.check !== "function") {
+    throw new Error("expect check to be a function");
   }
 };
 
@@ -47,10 +49,10 @@ module.exports = class Scond {
    */
   addMulti(conditions) {
     if (Array.isArray(conditions) === false) {
-      throw new Error('expect conditions to be an array')
+      throw new Error("expect conditions to be an array");
     }
 
-    conditions.forEach(cond => this.add(cond))
+    conditions.forEach(cond => this.add(cond));
   }
 
   /**
@@ -65,15 +67,15 @@ module.exports = class Scond {
    */
   exec(configs, values) {
     if (Array.isArray(configs) === false) {
-      throw new Error('expect configs to be an array');
+      throw new Error("expect configs to be an array");
     }
     return configs.every(cfg => {
       const cond = this.condList[cfg.id];
       if (cond === undefined) {
-        throw new Error(`expect condition module #${cfg.id} to be added`)
+        throw new Error(`expect condition module #${cfg.id} to be added`);
       }
 
       return cond.check(values, cfg.params);
-    })
+    });
   }
 };
