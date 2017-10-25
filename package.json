@@ -25,9 +25,39 @@
   "engines": {
     "node": ">=6"
   },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "prettier",
+    "env": {
+      "node": true,
+      "es6": true,
+      "mocha": true
+    },
+    "plugins": ["prettier"],
+    "parserOptions": {
+      "ecmaVersion": 2015,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "impliedStrict": true
+      }
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 120,
+          "trailingComma": "all"
+        }
+      ]
+    }
+  },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
     "chai": "^4.1.2",
     "codecov": "^3.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
     "mocha": "^4.0.1",
