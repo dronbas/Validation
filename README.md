@@ -1,4 +1,4 @@
-# Validation
+# Scond
 =========
 
 A small library that performs multi validation execution
