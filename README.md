@@ -3,7 +3,7 @@
 
 
 [![CircleCI](https://circleci.com/gh/dronbas/scond.svg?style=svg)](https://circleci.com/gh/dronbas/scond)
-
+[![codecov](https://codecov.io/gh/dronbas/scond/branch/master/graph/badge.svg)](https://codecov.io/gh/dronbas/scond)
 
 A small library that performs multi validation execution
 
